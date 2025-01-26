@@ -1,0 +1,7 @@
+# Prevent generator from creating these files:
+git_push.sh
+.github/
+.gitlab-ci.yml
+.travis.yml
+.openapi-generator/
+.gitignore
