@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **generate_thumbnail_converter_thumbnail_post**
-> generate_thumbnail_converter_thumbnail_post(file, width=width, height=height, color=color, strategy=strategy)
+> bytearray generate_thumbnail_converter_thumbnail_post(file, width=width, height=height, color=color, strategy=strategy)
 
 Generate Thumbnail
 
@@ -40,7 +40,9 @@ with mandolin_python_client.ApiClient(configuration) as api_client:
 
     try:
         # Generate Thumbnail
-        api_instance.generate_thumbnail_converter_thumbnail_post(file, width=width, height=height, color=color, strategy=strategy)
+        api_response = api_instance.generate_thumbnail_converter_thumbnail_post(file, width=width, height=height, color=color, strategy=strategy)
+        print("The response of ConvertersApi->generate_thumbnail_converter_thumbnail_post:\n")
+        pprint(api_response)
     except Exception as e:
         print("Exception when calling ConvertersApi->generate_thumbnail_converter_thumbnail_post: %s\n" % e)
 ```
@@ -60,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+**bytearray**
 
 ### Authorization
 
@@ -69,13 +71,13 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
- - **Accept**: application/json
+ - **Accept**: image/png, application/json
 
 ### HTTP response details
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful Response |  -  |
+**200** | Stream the thumbnail of the given image. |  -  |
 **422** | Validation Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

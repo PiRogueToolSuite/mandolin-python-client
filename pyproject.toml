@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "mandolin_python_client"
-version = "1.0.1"
+version = "1.0.2"
 description = "Mandolin"
 authors = ["U+039b <contact@defensive-lab.agency>"]
 license = "GNU General Public License v3.0"
